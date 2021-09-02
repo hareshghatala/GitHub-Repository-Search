@@ -42,6 +42,7 @@ public enum AlertIcon {
     case moon
     case star
     case exclamation
+    case info
     case flag
     case message
     case question
@@ -62,25 +63,26 @@ extension AlertIcon {
     
     var image: UIImage? {
         switch self {
-            case .heart:        return UIImage(systemName: "heart.fill")
-            case .doc:            return UIImage(systemName: "doc.fill")
+            case .heart:           return UIImage(systemName: "heart.fill")
+            case .doc:             return UIImage(systemName: "doc.fill")
             case .bookmark:        return UIImage(systemName: "bookmark.fill")
             case .moon:            return UIImage(systemName: "moon.fill")
             case .star:            return UIImage(systemName: "star.fill")
-            case .exclamation:    return UIImage(systemName: "exclamationmark.triangle.fill")
+            case .exclamation:     return UIImage(systemName: "exclamationmark.triangle.fill")
+            case .info:            return UIImage(systemName: "info.circle.fill")
             case .flag:            return UIImage(systemName: "flag.fill")
-            case .message:        return UIImage(systemName: "envelope.fill")
+            case .message:         return UIImage(systemName: "envelope.fill")
             case .question:        return UIImage(systemName: "questionmark.diamond.fill")
             case .bolt:            return UIImage(systemName: "bolt.fill")
-            case .shuffle:        return UIImage(systemName: "shuffle")
-            case .eject:        return UIImage(systemName: "eject.fill")
+            case .shuffle:         return UIImage(systemName: "shuffle")
+            case .eject:           return UIImage(systemName: "eject.fill")
             case .card:            return UIImage(systemName: "creditcard.fill")
-            case .rotate:        return UIImage(systemName: "rotate.right.fill")
+            case .rotate:          return UIImage(systemName: "rotate.right.fill")
             case .like:            return UIImage(systemName: "hand.thumbsup.fill")
-            case .dislike:        return UIImage(systemName: "hand.thumbsdown.fill")
-            case .privacy:        return UIImage(systemName: "hand.raised.fill")
+            case .dislike:         return UIImage(systemName: "hand.thumbsdown.fill")
+            case .privacy:         return UIImage(systemName: "hand.raised.fill")
             case .cart:            return UIImage(systemName: "cart.fill")
-            case .search:        return UIImage(systemName: "magnifyingglass")
+            case .search:          return UIImage(systemName: "magnifyingglass")
         }
     }
 }

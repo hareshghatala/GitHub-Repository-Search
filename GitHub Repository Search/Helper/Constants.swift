@@ -19,6 +19,7 @@ public let repoDetailsSegueId = "ShowRepositoryDetailsSegue"
 public let searchHistoryPlistFile = "SearchHistory.plist"
 public let searchHistoryLimit = 20
 
+public let searchMinCharValidationMsg = "Type in at least 3 characters to search."
 public let infoMsgNoImgFound = "No results found."
 public let errorMsgInvalidEndpoint = "Invalid URL or Endpoint. Please retry."
 public let errorMsgInvalidResponse = "Invalid response or Data issue. Please retry."

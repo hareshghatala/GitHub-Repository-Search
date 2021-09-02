@@ -77,9 +77,9 @@ extension GitHubRepositoriesViewController: UISearchBarDelegate {
         searchBar.text = ""
         searchBar.showsCancelButton = true
         searchBar.isSearchResultsButtonSelected = true
-        searchHistoryTableView.isHidden = false
         viewModel.fetchSearchHistory()
         searchHistoryTableView.reloadData()
+        searchHistoryTableView.isHidden = viewModel.searchHistory.isEmpty
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
@@ -94,14 +94,20 @@ extension GitHubRepositoriesViewController: UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
         self.view.endEditing(true)
     }
     
     private func performSearch() {
+        searchHistoryTableView.isHidden = true
         guard let text = mainSearchBar.text, !text.isEmpty else {
             return
         }
-        searchHistoryTableView.isHidden = true
+        if text.count < 3 {
+            ProgressHUD.show(searchMinCharValidationMsg, icon: .info, interaction: false)
+            mainSearchBar.becomeFirstResponder()
+            return
+        }
         viewModel.searchOffset = 1
         viewModel.fetchRepoItems(searchText: text, offset: viewModel.searchOffset)
     }
