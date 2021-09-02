@@ -18,6 +18,7 @@ This demo app contains search list. When opening the app, user allow to search G
 >  - [x] Swift 5
 >  - [x] iPhone only app
 >  - [x] Swift & Storyboard
+>  - [x] Unit test cases
 
 ### Architecture
 MVVM *(Model View ViewModel)*
