@@ -9,6 +9,7 @@ public let githubBaseURLString = "https://api.github.com/search"
 
 public let apiDataLimit = 40
 public let maxPageLimit = 25
+public let maxItemCount = 1000
 
 public let repoItemCellId = "RepoItemTableViewCell"
 public let searchHistoryCellId = "SearchHistoryCell"

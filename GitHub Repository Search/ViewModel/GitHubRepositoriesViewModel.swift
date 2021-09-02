@@ -27,7 +27,7 @@ class GitHubRepositoriesViewModel {
     
     func isOffsetExceeded(offset: Int) -> Bool {
         if offset > maxPageLimit ||
-            ((offset - 1) * apiDataLimit) > (searchData?.totalCount ?? 0) {
+            ((offset - 1) * apiDataLimit) >= (searchData?.totalCount ?? maxItemCount) {
             return true
         }
         return false
